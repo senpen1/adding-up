@@ -1,0 +1,30 @@
+// Animalクラスの定義
+public class Animal {
+    // 属性
+    String name;
+    int age;
+
+    // コンストラクタ
+    public Animal(String name, int age) {//文字列nameと整数ageを引数にとるコンストラクタを定義
+        this.name = name;//nameフィールドに引数の文字列を代入
+        this.age = age; //ageフィールドに引数の整数を代入
+    }
+
+    // メソッド
+    public void speak() {//speakメソッドを定義
+        System.out.println(this.name + " は鳴いた");//this.nameフィールドの値を出力し、"鳴いた”と表現する。
+    }
+
+    public class Main {//メインメソッドで上で定義したAnimalクラスを使用する
+    public static void main(String[] args) {//これがないとうまく動かない
+        // インスタンスの生成
+        Animal dog = new Animal("Dog", 5);//Animalクラスにdogというインスタンスを、newで生成し、"Dog"と"5"を引数として渡す
+        Animal cat = new Animal("Cat", 3);//Animalクラスにcatというインスタンスを、newで生成し、”Cat”と”3”を引数として渡す
+
+        // メソッドの呼び出し
+        dog.speak();//dogインスタンス内のspeakメソッドを呼び出す
+        cat.speak();
+    }
+}
+}
+   
